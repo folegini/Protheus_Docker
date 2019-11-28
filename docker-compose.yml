@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  appserver:
+    build: .
+    ports:
+      - 8000:8000
+      - 9000:9000
+    user: root
+    environment:
+      - DBACCESS_SERVER=localhost
+      - DBACCESS_ALIAS=SYSTEM
+      - DBACCESS_PORT=7890
